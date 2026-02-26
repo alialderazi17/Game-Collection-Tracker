@@ -14,8 +14,10 @@ This is a website where you can rate and review video games, or look at other re
 - JavaScript
 - EJS
 - MongoDB
+- Express
+- Node.js
 - Insomnia
-- Markdown fot documention
+- Markdown for documention
 
 ### ***Getting Started***
 1. Open the project
