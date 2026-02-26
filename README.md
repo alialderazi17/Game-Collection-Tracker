@@ -2,7 +2,7 @@
 ## Done By: By:Ali Alderazi AND Mohammed Hamood
 ## Date: Feb 26th, 2026
 
-###Prpject 2 - Unit2 - GA
+### Prpject 2 - Unit2 - GA
 
 ### ***Descripition***
 This is a website where you can rate and review video games, or look at other reviews. This is the 2nd Project for the General Assembly Software Engineering Bootcamp.
