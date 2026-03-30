@@ -51,9 +51,21 @@ const addGamePage = async (req, res) => {
   }
 }
 
+const deleteGame = async (req, res) => {
+  try {
+    await Game.findByIdAndDelete(req.params.id)
+    res.redirect("/games")
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "⚠️ Error deleting game!", error: error.message })
+  }
+}
+
 module.exports = {
   showAllGames,
   addNewGame,
   showGamePage,
   addGamePage,
+  deleteGame,
 }
