@@ -1,5 +1,5 @@
 # Game-Collection-Tracker
-## Done By: By:Ali Alderazi AND Mohammed Hamood
+## Done By: Ali Alderazi AND Mohammed Hamood
 ## Date: Feb 26th, 2026
 
 ### Prpject 2 - Unit2 - GA
