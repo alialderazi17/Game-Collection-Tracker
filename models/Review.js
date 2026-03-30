@@ -1,6 +1,5 @@
-const { Timestamp } = require("bson")
-const mongoose = require("mongoose")
 
+const mongoose = require("mongoose")
 const reviewSchema = new mongoose.Schema({
 body:{type:String, required:true},
 rating:{ type: Number,required:true},
@@ -16,3 +15,6 @@ user:{type:mongoose.Schema.Types.ObjectId,
 },
 {Timestamp:true}
 )
+const Review = mongoose.model("Review", reviewSchema)
+
+module.exports = Review
