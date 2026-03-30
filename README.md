@@ -21,6 +21,6 @@ This is a website where you can rate and review video games, or look at other re
 
 ### ***Getting Started***
 1. Open the project
-2. Sign-up (Name - Email - Password
-3. Sing-in
+2. Sign-up (Name - Email - Password)
+3. Sign-in
    
