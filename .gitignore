@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 /node_modules
 package-lock.json
 .env
+=======
+node_modules
+package-lock.json
+package.json
+.env
+gameController.js
+reviewController.js
+db
+middleware
+gameRouter.js
+reviewRouter.js
+games
+
+>>>>>>> 415e402c22844ab658871c190499acef77de5704
