@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+package.json
+.env
+gameController.js
+reviewController.js
+db
+middleware
+gameRouter.js
+reviewRouter.js
+games
+
