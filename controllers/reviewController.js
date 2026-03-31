@@ -12,7 +12,7 @@ const createReview = async (req, res) => {
 const getAllReviews = async (req, res) => {
   try {
     const reviews = await Review.find({})
-    res.render("./reviews/all.ejs", { reviews })
+    res.render("./reviews/index.ejs", { reviews })
   } catch (error) {
     console.error(
       "⚠️ An error has occurred getting all reviews!",
@@ -21,12 +21,23 @@ const getAllReviews = async (req, res) => {
   }
 }
 
-const getReviewById = async (req, res) => {
+// const getReviewById = async (req, res) => {
+//   try {
+//     const review = await Review.findById(req.params.id)
+//     res.render("./reviews/show.ejs", { review })
+//   } catch (error) {
+//     console.error("⚠️ An error has occurred getting a review!", error.message)
+//   }
+// }
+
+const showNewReviewPage = async (req, res) => {
   try {
-    const review = await Review.findById(req.params.id)
-    res.render("./reviews/show.ejs", { review })
+    res.render("./reviews/new.ejs")
   } catch (error) {
-    console.error("⚠️ An error has occurred getting a review!", error.message)
+    res.status(404).json({
+      message: "⚠️ Error showing New Review Page!",
+      error: error.message,
+    })
   }
 }
 
@@ -44,6 +55,7 @@ const updateReviewById = async (req, res) => {
 module.exports = {
   createReview,
   getAllReviews,
-  getReviewById,
+  // getReviewById,
+  showNewReviewPage,
   updateReviewById,
 }

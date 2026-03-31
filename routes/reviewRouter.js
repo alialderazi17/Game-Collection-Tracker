@@ -6,7 +6,8 @@ const middleware = require("../middleware")
 
 router.post("/", middleware.isSignedIn, reviewController.createReview)
 router.get("/", reviewController.getAllReviews)
-router.get("/:id", middleware.isSignedIn, reviewController.getReviewById)
+// router.get("/:id", middleware.isSignedIn, reviewController.getReviewById)
+router.get("/new", middleware.isSignedIn, reviewController.showNewReviewPage)
 router.put("/:id", middleware.isSignedIn, reviewController.updateReviewById)
 
 module.exports = router
