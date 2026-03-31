@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>New Review</title>
+  </head>
+  <body>
+    <h1>Write a Review</h1>
+
+    <form action="/reviews" method="POST">
+      <label>Title</label>
+      <input type="text" name="title" required />
+
+      <label>Rating (1-5)</label>
+      <input type="number" name="rating" min="1" max="5" required />
+
+      <label>Body</label>
+      <textarea name="body" rows="5" required></textarea>
+
+      <button type="submit">Create Review</button>
+    </form>
+
+    <p><a href="/reviews">Back to Reviews</a></p>
+  </body>
+</html>
