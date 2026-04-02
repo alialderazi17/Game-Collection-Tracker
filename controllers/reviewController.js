@@ -19,7 +19,7 @@ const createReview = async (req, res) => {
 
 const getAllReviews = async (req, res) => {
   try {
-    const reviews = await Review.find({}).populate("game")
+    const reviews = await Review.find({}).populate("game").populate("user")
     res.render("./reviews/index.ejs", { reviews })
   } catch (error) {
     console.error(

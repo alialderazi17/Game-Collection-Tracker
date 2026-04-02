@@ -1,5 +1,6 @@
 <%- include('../partials/header.ejs') %>
-    <h1><%= user.username %>'s Reviews</h1>
+    <% console.log(reviews) %>
+
     <form method="GET" class="review-block">
     <button type="submit">
     <a href="/reviews/new" id="review-button">Write a review</a>
@@ -12,6 +13,7 @@
 
     <% reviews.forEach((review) => { %>
       <li><article>
+        <h2> Written By: <span style="color: crimson;"><%= review.user.username %></span></h2>
         <h2><a href="/reviews/<%=review._id%>"><%= review.game?.title %></a> <br> <img src="<%= review.game.cover%>" alt="<%= review.game.title%>"<%= review.game.cover%> width="300" />
         </h2>
         <form action="" class="review-block">

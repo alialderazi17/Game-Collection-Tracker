@@ -87,6 +87,7 @@ form button {
 }
 
 form textarea {
+  white-space: pre-wrap;
   height: 150px;
 }
 
@@ -127,6 +128,12 @@ footer {
 #pfp {
   width: 400px;
   height: 400px;
+  border-radius: 50%;
+}
+
+#user-pfp {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
 }
 

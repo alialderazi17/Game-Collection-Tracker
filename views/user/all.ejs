@@ -1,0 +1,12 @@
+<%- include("../partials/header.ejs") %>
+  <h2>All Profiles</h2>
+<ul>
+  <% users.forEach(recipe => { %>
+    <li>
+      <a href="/user/<%= user._id %>"><%= user.username %></a> <br>
+      <img src="<%= user.picture %>" alt="Profile Picture" id="user-pfp"  />
+
+    </li>
+  <% }) %>
+</ul>
+<%- include("../partials/footer.ejs") %>

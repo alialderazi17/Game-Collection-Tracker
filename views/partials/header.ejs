@@ -10,6 +10,7 @@
     <nav>
       <a href="/">Home</a>
 
+
       <% if (!user) { %>
 
       <a href="/auth/sign-up">Sign Up</a>
@@ -17,10 +18,10 @@
       <a href="/auth/sign-in">Sign In</a>
 
       <% } else { %>
-
       <a href="/games">All Games</a>
       <a href="/games/new">Add New Game</a>
       <a href="/user/<%= user._id %>">My Profile</a>
+      <a href="/reviews">All Reviews</a>
       <a href="/auth/sign-out">Sign Out</a>
 
       <% } %>

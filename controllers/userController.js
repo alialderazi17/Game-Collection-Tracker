@@ -3,7 +3,6 @@ const User = require("../models/User")
 const getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.session.user._id)
-    if (!user) return res.redirect("/")
     const data = {
       _id: user._id,
       username: user.username,
@@ -18,5 +17,5 @@ const getUserProfile = async (req, res) => {
 }
 
 module.exports = {
-  getUserProfile
+  getUserProfile,
 }
