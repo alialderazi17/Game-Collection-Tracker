@@ -91,7 +91,7 @@ form textarea {
 }
 
 button {
-  background-color: #b98962;
+  background-color: #e98b8b;
   color: white;
   border: none;
   cursor: pointer;
@@ -99,7 +99,7 @@ button {
 }
 
 button:hover {
-  background-color: #a36d4a;
+  background-color: #500000;
 }
 
 ul {
