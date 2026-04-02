@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Games</title>
-  </head>
-  <body>
+<%- include('../partials/header.ejs') %>
     <h1>All Games</h1>
 
-    <p><a href="/games/new">Add a game</a></p>
+
 
     <% if (games.length === 0) { %>
-      <p>No games yet.</p>
+      <p>No games yet.</p> <p><a href="/games/new">Add a game?</a></p>
     <% } %>
 
     <% games.forEach((game) => { %>
       <article>
         <h2><a href="/games/<%= game._id %>"><%= game.title %></h2></a>
-        <h3><%= game.genre %></h3>
-        <h3><%= game.releaseDate %></h3>
+        <h2><img src="<%= game.cover %>" alt="<%= game.title%>" width="300" /></h2>
+
 
 
       </article>
     <% }) %>
 
-    <p><a href="/">Home</a></p>
-  </body>
-</html>
+
+<%- include('../partials/footer.ejs') %>

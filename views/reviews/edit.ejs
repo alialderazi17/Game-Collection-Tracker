@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+
+<h2>Edit Review</h2>
+<form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+  <textarea name="body" required><%= review.body %></textarea>
+  <input
+    type="number"
+    name="rating"
+    min="1"
+    max="5"
+    value="<%= review.rating %>"
+  />
+  <button type="submit">Update</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= game.title %></title>
-  </head>
-  <body>
-    <h1><%= game.title %></h1>
-    <h2><%= game.releaseDate %></h2>
-    <h3><%= game.genre %></h3>
+<%- include('../partials/header.ejs') %>
+<h1><%= game.title %></h1>
+<h1><img src="<%= game.cover %>" alt="Game Cover Image" width="150" /></h1>
+<h2><%= game.releaseYear %></h2>
+<h3><%= game.genre %></h3>
+<form method="GET">
+  <button type="submit">
+    <a href="/reviews/new" id="review-button">Write a review</a>
+  </button>
+</form>
+<a href="/games">Back to Games</a>
 
-    <form action="/games/<%=game._id%>?_method=DELETE" method="POST">
-      <button type="submit">Delete <%= game.title %></button>
-    </form>
-
-    <a href="/games">Back to Games</a>
-  </body>
-</html>
+<%- include('../partials/footer.ejs') %>

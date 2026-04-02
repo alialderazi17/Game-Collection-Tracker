@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>New Game</title>
-  </head>
-  <body>
-    <h1>Add a game</h1>
+<%- include('../partials/header.ejs') %>
+<h1>Add a game</h1>
 
-    <form action="/games" method="POST">
-      <label>Title</label>
-      <input type="text" name="title" required />
-      <label>Genre</label>
-      <input type="text" name="genre" required />
+<form action="/games" method="POST">
+  <label>Title</label>
+  <input type="text" name="title" required />
+  <label>Genre</label>
+  <input type="text" name="genre" required />
 
-      <label>Release Year</label>
-      <input type="text" name="releaseDate" required />
+  <label>Release Year</label>
+  <input type="text" name="releaseYear" required />
 
-      <button type="submit">Add game</button>
-    </form>
+  <label>Image URL</label>
+  <input type="text" name="cover" required />
 
-    <p><a href="/games">Back to games</a></p>
-  </body>
-</html>
+  <button type="submit">Add game</button>
+</form>
+
+<p><a href="/games">Back to games</a></p>
+
+<%- include('../partials/footer.ejs') %>

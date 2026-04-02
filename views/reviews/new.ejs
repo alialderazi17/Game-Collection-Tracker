@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>New Review</title>
-  </head>
-  <body>
+<%- include('../partials/header.ejs') %>
     <h1>Write a Review</h1>
 
     <form action="/reviews" method="POST">
-      <label>Title</label>
-      <input type="text" name="title" required />
-
+      <label for="game">Select Game</label>
+  <select name="game" id="game" required>
+    <option value="" disabled selected>-- Choose a Game --</option>
+    <% games.forEach(game => { %>
+      <option value="<%= game._id %>"><%= game.title %></option>
+    <% }) %>
+  </select>
       <label>Rating (1-5)</label>
       <input type="number" name="rating" min="1" max="5" required />
 
@@ -23,5 +19,5 @@
     </form>
 
     <p><a href="/reviews">Back to Reviews</a></p>
-  </body>
-</html>
+
+<%- include('../partials/footer.ejs') %>

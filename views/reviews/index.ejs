@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+    <h1><%= user.username %>'s Reviews</h1>
+    <form method="GET" class="review-block">
+    <button type="submit">
+    <a href="/reviews/new" id="review-button">Write a review</a>
+  </button>
+</form>
+
+    <% if (reviews.length === 0) { %>
+      <p>No reviews yet.</p>
+    <% } %>
+
+    <% reviews.forEach((review) => { %>
+      <li><article>
+        <h2><a href="/reviews/<%=review._id%>"><%= review.game?.title %></a> <br> <img src="<%= review.game.cover%>" alt="<%= review.game.title%>"<%= review.game.cover%> width="300" />
+        </h2>
+        <form action="" class="review-block">
+        <p>Rating: <%= review.rating %>/5</p>
+
+
+
+        <p><%= review.body %></p>
+      </form>
+      </article></li>
+    <% }) %>
+
+
+<%- include('../partials/footer.ejs') %>
